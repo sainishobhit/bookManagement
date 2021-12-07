@@ -28,7 +28,7 @@ const userSchema = new mongoose.Schema({
     password: {
         type: String,
         required: 'password is required',
-        validate: { validator: validator.PasswordLength, message: 'The password should be more than 8 letters and less tham 15 letters', isAsync: false }
+        validate: { validator: validator.passwordLength, message: 'The password should be more than 8 letters and less tham 15 letters', isAsync: false }
     },
     address: {
         street: { type: String },
